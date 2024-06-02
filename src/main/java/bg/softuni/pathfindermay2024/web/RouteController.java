@@ -9,10 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
 /**
- * Controller to handle all things route relates
+ * Controller to handle all things route relates.
  */
-
-
 @Controller
 public class RouteController {
 
@@ -22,10 +20,11 @@ public class RouteController {
         this.routeService = routeService;
     }
 
+/**
+ * Method to handle tke listing of all routes.
+ */
     @GetMapping("/routes")
     public String routes(Model model) {
-
-//        RouteShortInfoDTO randomRoute = routeService.getRandomRoute();
 
         List<RouteShortInfoDTO> routes = routeService.getAll();
 
