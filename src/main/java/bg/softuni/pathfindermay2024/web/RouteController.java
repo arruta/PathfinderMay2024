@@ -8,10 +8,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
+/**
+ * Controller to handle all things route relates
+ */
+
+
 @Controller
 public class RouteController {
 
-    private RouteService routeService;
+    private final RouteService routeService;
 
     public RouteController(RouteService routeService) {
         this.routeService = routeService;
